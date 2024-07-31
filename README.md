@@ -32,7 +32,7 @@ However, this peace is soon disrupted when you encounter your unsettling neighbo
 #### Best thanks for
 
 ##### Plugins and Tool
-- <a href="https://godotengine.org/">Dialogic Plugin</a>
+- <a href="https://godotengine.org/">Godot Engine </a>
 - <a href="https://github.com/dialogic-godot">Dialogic Plugin</a>
 - <a href="https://github.com/Bytezz/godot-credits">Credits plugin by Bytezz</a>
 
