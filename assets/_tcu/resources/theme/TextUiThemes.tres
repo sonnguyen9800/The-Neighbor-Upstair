@@ -1,0 +1,7 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://cn3k7xqhf3xue"]
+
+[ext_resource type="FontFile" uid="uid://bkf1rt4kbuotx" path="res://assets/addons/fonts/moderno_3/Moderno.ttf" id="1_qbfml"]
+
+[resource]
+default_font = ExtResource("1_qbfml")
+Button/fonts/font = ExtResource("1_qbfml")

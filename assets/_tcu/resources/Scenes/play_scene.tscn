@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=3 uid="uid://cl74b834mjbpi"]
+
+[ext_resource type="Script" path="res://assets/_tcu/resources/scenes/play_scene.gd" id="1_1i6gx"]
+[ext_resource type="Texture2D" uid="uid://c0tijkvxklfio" path="res://assets/_tcu/resources/sprites/black.png" id="2_jpag4"]
+
+[node name="PlayScene" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.0
+script = ExtResource("1_1i6gx")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="TextureRect" parent="MarginContainer"]
+layout_mode = 2
+texture = ExtResource("2_jpag4")
+expand_mode = 2
+
+[node name="PopupContainer" type="CanvasLayer" parent="."]
+layer = 2

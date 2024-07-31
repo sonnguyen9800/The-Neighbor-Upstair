@@ -1,0 +1,114 @@
+[gd_scene load_steps=3 format=3 uid="uid://v3fghn8361at"]
+
+[ext_resource type="Script" path="res://assets/_tcu/scripts/ui/UIInfoAlert.cs" id="1_mps10"]
+[ext_resource type="FontFile" uid="uid://4yr5tkby486m" path="res://assets/addons/fonts/novello/OpenType_PS/Novello_Red_Normal.otf" id="2_23d6k"]
+
+[node name="UIInfoAlert" type="CanvasLayer" node_paths=PackedStringArray("_textAlertPrefab", "_confirmBoxNode", "_canvasModule", "_titleText")]
+layer = 3
+script = ExtResource("1_mps10")
+_textAlertPrefab = NodePath("PopupText/RichTextLabel")
+_confirmBoxNode = NodePath("ConfirmBox")
+_canvasModule = NodePath("ConfirmBox/CanvasModulate")
+_titleText = NodePath("ConfirmBox/ColorRect/Title")
+
+[node name="PopupText" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 962.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PopupText"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -107.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/normal_font = ExtResource("2_23d6k")
+theme_override_font_sizes/normal_font_size = 50
+bbcode_enabled = true
+text = "[center]Alert text[/center]"
+
+[node name="ConfirmBox" type="CanvasLayer" parent="."]
+layer = 3
+
+[node name="CanvasModulate" type="CanvasModulate" parent="ConfirmBox"]
+
+[node name="Background" type="ColorRect" parent="ConfirmBox"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0941176, 0.0941176, 0.0941176, 0.392157)
+
+[node name="ColorRect" type="ColorRect" parent="ConfirmBox"]
+anchors_preset = -1
+anchor_left = 0.277
+anchor_top = 0.35
+anchor_right = 0.723
+anchor_bottom = 0.57
+offset_left = 0.159973
+offset_top = -3.05176e-05
+offset_right = 0.839966
+offset_bottom = 0.399902
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Title" type="RichTextLabel" parent="ConfirmBox/ColorRect"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -254.0
+offset_top = 15.0
+offset_right = 254.0
+offset_bottom = 122.0
+grow_horizontal = 2
+theme_override_fonts/normal_font = ExtResource("2_23d6k")
+theme_override_font_sizes/normal_font_size = 40
+bbcode_enabled = true
+text = "[center]Are you sure you want to do this?[/center]"
+fit_content = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ConfirmBox/ColorRect"]
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -336.5
+offset_top = -109.0
+offset_right = 336.5
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 50
+alignment = 1
+
+[node name="Button" type="Button" parent="ConfirmBox/ColorRect/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("2_23d6k")
+theme_override_font_sizes/font_size = 35
+text = "Yes"
+
+[node name="Button2" type="Button" parent="ConfirmBox/ColorRect/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("2_23d6k")
+theme_override_font_sizes/font_size = 35
+text = "No"
+
+[connection signal="pressed" from="ConfirmBox/ColorRect/HBoxContainer/Button" to="." method="OnYesButtonPressed"]
+[connection signal="pressed" from="ConfirmBox/ColorRect/HBoxContainer/Button2" to="." method="OnNoButtonPressed"]

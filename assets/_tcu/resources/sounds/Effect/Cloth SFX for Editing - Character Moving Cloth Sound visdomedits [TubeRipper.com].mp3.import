@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cg8agrlov1tfa"
+path="res://.godot/imported/Cloth SFX for Editing - Character Moving Cloth Sound visdomedits [TubeRipper.com].mp3-6b8f25984ffd7be7ec7cc4947201005c.mp3str"
+
+[deps]
+
+source_file="res://assets/_tcu/resources/sounds/Effect/Cloth SFX for Editing - Character Moving Cloth Sound visdomedits [TubeRipper.com].mp3"
+dest_files=["res://.godot/imported/Cloth SFX for Editing - Character Moving Cloth Sound visdomedits [TubeRipper.com].mp3-6b8f25984ffd7be7ec7cc4947201005c.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,36 @@
+[gd_scene load_steps=4 format=3 uid="uid://b1n5cmykfiskj"]
+
+[ext_resource type="Script" path="res://assets/_tcu/scripts/ui/effect/effect_floating_ui.gd" id="1_4kttd"]
+[ext_resource type="Texture2D" uid="uid://be4x3uxdt1es4" path="res://assets/_tcu/resources/sprites/effect/texture_demo_effect.png" id="1_jr671"]
+[ext_resource type="Script" path="res://assets/_tcu/scripts/ui/ui_icon.gd" id="3_pjc7q"]
+
+[node name="DemoEffect" type="Node2D" node_paths=PackedStringArray("ui_icon")]
+script = ExtResource("1_4kttd")
+ui_icon = NodePath("Control/TextureRect")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -109.0
+offset_top = -166.5
+offset_right = 109.0
+offset_bottom = 166.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Control" node_paths=PackedStringArray("rectTexture")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_jr671")
+expand_mode = 1
+stretch_mode = 4
+script = ExtResource("3_pjc7q")
+rectTexture = NodePath(".")

@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://b3jd2w16x8duh"]
+
+[node name="Sample_Scene" type="Node2D"]
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_right = 279.0
+offset_bottom = 56.0
+text = "Fuck off"

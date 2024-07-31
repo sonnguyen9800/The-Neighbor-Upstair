@@ -1,0 +1,63 @@
+
+
+
+
+{DEVELOPERS}
+[Game Designer]
+Chuong Nguyen Hoang Khanh
+[Programmer]
+Son Nguyen Hoang
+
+[Sound Designer]
+Chuong Nguyen Hoang Khanh
+
+[Narratives & Story Writter]
+Chuong Nguyen Hoang Khanh
+
+[Tester & Tool Developer]
+Son Nguyen Hoang
+Chuong Nguyen Hoang Khanh
+
+{Background Musics}
+
+[Ambulance in Background In City]
+bpatrick
+
+[Serenade, Op6 - A Far Cry]
+Josef Suk
+
+{Sound effects}
+[Character Voices]
+Replica Studios Audio
+
+[Effects] 
+TubeRipper.com
+Sonniss.com - GDC 2024 - Game Audio Bundle
+juandamb
+jjdg
+
+{FONTS}
+
+[Moderno 3]
+Vladimir Nikolic
+
+[Novello]
+ingoFonts
+
+[Who asks Satan]
+Font Monger
+
+{Third Party Tool & Engine}
+[Dialogic 2] 
+https://github.com/dialogic-godot
+[Credits] 
+https://github.com/Bytezz/godot-credits
+[Godot Engine]
+https://godotengine.org/
+
+{And Finally, the special guest}
+
+
+
+
+

@@ -1,0 +1,63 @@
+[gd_scene load_steps=5 format=3 uid="uid://b2aqiul1ykqwe"]
+
+[ext_resource type="Script" path="res://assets/_tcu/scripts/scenes/SceneSplash.cs" id="1_to6x4"]
+[ext_resource type="Texture2D" uid="uid://c0tijkvxklfio" path="res://assets/_tcu/resources/sprites/black.png" id="2_mrw6a"]
+[ext_resource type="FontFile" uid="uid://bkf1rt4kbuotx" path="res://assets/addons/fonts/moderno_3/Moderno.ttf" id="3_kkji5"]
+[ext_resource type="Texture2D" uid="uid://6mom8uci541o" path="res://assets/_tcu/resources/sprites/splash/logo_large_color_dark.png" id="4_8c5r7"]
+
+[node name="SplashScreen" type="Control" node_paths=PackedStringArray("_studioNameLabelTxt", "_godotThumbnailImg")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_to6x4")
+_studioNameLabelTxt = NodePath("StudioName")
+_godotThumbnailImg = NodePath("GodotIconImg")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_mrw6a")
+
+[node name="StudioName" type="RichTextLabel" parent="."]
+custom_minimum_size = Vector2(500, 100)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -0.5
+offset_top = -34.5
+offset_right = 0.5
+offset_bottom = 34.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/normal_font = ExtResource("3_kkji5")
+theme_override_font_sizes/normal_font_size = 110
+bbcode_enabled = true
+text = "[center]Sisyphus Lab[/center]"
+fit_content = true
+
+[node name="GodotIconImg" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -618.408
+offset_top = -250.0
+offset_right = 618.408
+offset_bottom = 250.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_8c5r7")
+expand_mode = 3
+stretch_mode = 4

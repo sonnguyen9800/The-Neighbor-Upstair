@@ -1,0 +1,67 @@
+[gd_scene load_steps=5 format=3 uid="uid://ct4dek63v5j5j"]
+
+[ext_resource type="Script" path="res://assets/addons/_3rdPackage/credits-scene/credits-scene/credits.gd" id="1_3jpn6"]
+[ext_resource type="AudioStream" uid="uid://dek1poeu0vrcy" path="res://assets/_tcu/resources/sounds/Background/Josef Suk, Serenade, Op 6 - A Far Cry.mp3" id="2_8ts7h"]
+[ext_resource type="FontFile" uid="uid://bkf1rt4kbuotx" path="res://assets/addons/fonts/moderno_3/Moderno.ttf" id="3_ty6rg"]
+[ext_resource type="FontFile" uid="uid://4yr5tkby486m" path="res://assets/addons/fonts/novello/OpenType_PS/Novello_Red_Normal.otf" id="4_m3343"]
+
+[node name="credits" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_3jpn6")
+creditsFile = "res://assets/_tcu/resources/credits/credits.txt"
+musicPlaylist = Array[AudioStream]([ExtResource("2_8ts7h")])
+stringContent = "{DEVELOPERS}[Game Designer]Chuong Nguyen Hoang Khanh[Programmer]Son Nguyen Hoang[Sound Designer]Chuong Nguyen Hoang Khanh[Narratives & Story Writter]Chuong Nguyen Hoang Khanh[Tester & Tool Developer]Son Nguyen HoangChuong Nguyen Hoang Khanh{Background Musics}[Ambulance in Background In City]bpatrick[Serenade, Op6 - A Far Cry]Josef Suk{Sound effects}[Character Voices]Replica Studios Audio[Effects] TubeRipper.comSonniss.com - GDC 2024 - Game Audio Bundlejuandambjjdg{FONTS}[Moderno 3]Vladimir Nikolic[Novello]ingoFonts[Who asks Satan]Font Monger{Third Party Tool & Engine}[Dialogic 2] https://github.com/dialogic-godot[Credits] https://github.com/Bytezz/godot-credits[Godot Engine]https://godotengine.org/{And Finally, the special guest}"
+
+[node name="background" type="ColorRect" parent="."]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0, 0, 0, 1)
+
+[node name="backgroundVideo" type="VideoStreamPlayer" parent="."]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+expand = true
+
+[node name="musicPlayer" type="AudioStreamPlayer" parent="."]
+
+[node name="scrollingContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="titleImg" type="TextureRect" parent="scrollingContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+stretch_mode = 5
+
+[node name="StudioName" type="RichTextLabel" parent="scrollingContainer"]
+custom_minimum_size = Vector2(500, 100)
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("3_ty6rg")
+theme_override_font_sizes/normal_font_size = 110
+bbcode_enabled = true
+text = "[center]Sisyphus Lab[/center]"
+fit_content = true
+
+[node name="GameName" type="RichTextLabel" parent="scrollingContainer"]
+custom_minimum_size = Vector2(500, 100)
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("4_m3343")
+theme_override_font_sizes/normal_font_size = 110
+bbcode_enabled = true
+text = "[center]The neighbor Upstair[/center]"
+fit_content = true
+
+[connection signal="finished" from="backgroundVideo" to="." method="_on_backgroundVideo_finished"]
+[connection signal="finished" from="musicPlayer" to="." method="_on_musicPlayer_finished"]

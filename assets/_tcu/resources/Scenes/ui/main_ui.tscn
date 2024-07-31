@@ -1,0 +1,126 @@
+[gd_scene load_steps=5 format=3 uid="uid://7w72s23s8cr1"]
+
+[ext_resource type="Script" path="res://assets/_tcu/scripts/scenes/SceneMain.cs" id="1_7hitf"]
+[ext_resource type="Texture2D" uid="uid://861t5raxw5cv" path="res://assets/_tcu/resources/backgrounds/Camera_1.png" id="2_f6mlm"]
+[ext_resource type="Theme" uid="uid://cn3k7xqhf3xue" path="res://assets/_tcu/resources/theme/TextUiThemes.tres" id="3_7e244"]
+[ext_resource type="Script" path="res://assets/SisyphusGLibrary/ui/AutoSize/AutoSizeLabel.gd" id="4_min85"]
+
+[node name="MainScene" type="Control" node_paths=PackedStringArray("_uiMainControl", "_uiCreditsButton")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7hitf")
+_uiMainControl = NodePath("Main")
+_uiCreditsButton = NodePath("Main/VBoxContainer/Credits")
+
+[node name="Main" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Main"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_f6mlm")
+
+[node name="GameTitle" type="Control" parent="Main"]
+custom_minimum_size = Vector2(1920, 500)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -960.0
+offset_top = 100.0
+offset_right = 960.0
+offset_bottom = 600.0
+grow_horizontal = 2
+size_flags_stretch_ratio = 0.0
+
+[node name="AutoSizeLabel" type="Label" parent="Main/GameTitle"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_7e244")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 100
+text = "The Children Upstair"
+horizontal_alignment = 1
+vertical_alignment = 1
+clip_text = true
+script = ExtResource("4_min85")
+max_font_size = 100
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Main"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -771.0
+offset_top = -440.0
+offset_right = -371.0
+offset_bottom = -114.0
+grow_horizontal = 0
+grow_vertical = 0
+alignment = 1
+
+[node name="NewGame" type="Button" parent="Main/VBoxContainer"]
+modulate = Color(1, 1, 1, 0.772549)
+custom_minimum_size = Vector2(0, 75)
+layout_mode = 2
+theme = ExtResource("3_7e244")
+theme_override_font_sizes/font_size = 50
+text = "Play Game"
+
+[node name="Continue" type="Button" parent="Main/VBoxContainer"]
+modulate = Color(1, 1, 1, 0.772549)
+custom_minimum_size = Vector2(0, 75)
+layout_mode = 2
+theme = ExtResource("3_7e244")
+theme_override_font_sizes/font_size = 50
+text = "Continue"
+
+[node name="Setting" type="Button" parent="Main/VBoxContainer"]
+modulate = Color(1, 1, 1, 0.772549)
+custom_minimum_size = Vector2(0, 75)
+layout_mode = 2
+theme = ExtResource("3_7e244")
+theme_override_font_sizes/font_size = 50
+text = "Setting"
+
+[node name="Credits" type="Button" parent="Main/VBoxContainer"]
+modulate = Color(1, 1, 1, 0.772549)
+custom_minimum_size = Vector2(0, 75)
+layout_mode = 2
+theme = ExtResource("3_7e244")
+theme_override_font_sizes/font_size = 50
+text = "Credits"
+
+[node name="Exit" type="Button" parent="Main/VBoxContainer"]
+modulate = Color(1, 1, 1, 0.772549)
+custom_minimum_size = Vector2(0, 75)
+layout_mode = 2
+theme = ExtResource("3_7e244")
+theme_override_font_sizes/font_size = 50
+text = "Exit"
+
+[connection signal="pressed" from="Main/VBoxContainer/NewGame" to="." method="OnNewGameStart"]
+[connection signal="pressed" from="Main/VBoxContainer/Continue" to="." method="OnContinueGameClick"]
+[connection signal="pressed" from="Main/VBoxContainer/Setting" to="." method="OnSettingGameClick"]
+[connection signal="pressed" from="Main/VBoxContainer/Credits" to="." method="OnViewCreditClick"]
+[connection signal="pressed" from="Main/VBoxContainer/Exit" to="." method="OnQuitGameClick"]

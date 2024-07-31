@@ -1,0 +1,33 @@
+[gd_scene load_steps=3 format=3 uid="uid://bkk4v6tponyw3"]
+
+[ext_resource type="Script" path="res://assets/_tcu/scripts/prefab/timeline/timeline_clickeable_mask.gd" id="1_pq8ch"]
+[ext_resource type="Texture2D" uid="uid://e2ty76mg0bc6" path="res://assets/_tcu/resources/sprites/demo_old_lady_creepy_001.png" id="2_csr2f"]
+
+[node name="TimelineClickableMask" type="Node"]
+script = ExtResource("1_pq8ch")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Control"]
+modulate = Color(1, 1, 1, 0.537255)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 6.0
+offset_top = 3.0
+offset_right = 6.0
+offset_bottom = 3.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_csr2f")
+expand_mode = 2
+stretch_mode = 4
+
+[connection signal="gui_input" from="Control/TextureRect" to="." method="_on_texture_rect_gui_input"]

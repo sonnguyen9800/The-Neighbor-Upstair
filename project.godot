@@ -1,0 +1,219 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="The Neighbors Upstair"
+config/version="0.1"
+run/main_scene="res://assets/_tcu/resources/scenes/main.tscn"
+config/features=PackedStringArray("4.2", "C#", "GL Compatibility")
+boot_splash/bg_color=Color(0, 0, 0, 1)
+boot_splash/show_image=false
+boot_splash/fullsize=false
+boot_splash/use_filter=false
+config/icon="res://assets/_tcu/config/game_icon.ico"
+config/windows_native_icon="res://godot_icon/.ico"
+
+[autoload]
+
+Define="*res://assets/_tcu/scripts/utils/define.gd"
+SceneDefine="*res://assets/_tcu/scripts/utils/scene_define.gd"
+SceneUtils="*res://assets/_tcu/scripts/utils/scene_utils.gd"
+SignalCenter="*res://assets/_tcu/scripts/signal/signal_center.gd"
+PopupManager="*res://assets/_tcu/scripts/popup/popup_manager.gd"
+SceneManager="*res://assets/_tcu/scripts/manager/scene_manager.gd"
+UiMainGameEvents="*res://assets/_tcu/scripts/events/UIMainGameEvents.cs"
+DialogicHelper="*res://assets/_tcu/scripts/utils/DialogicHelper.gd"
+PlayerPreferencesManager="*res://assets/_tcu/scripts/data/PlayerPreferencesManager.cs"
+Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
+
+[dialogic]
+
+variables={
+"Suspect": 0,
+"ThresholdSuspect": "2",
+"WindowClose": "0",
+"choice_1": "0",
+"choice_2": "0",
+"choice_3": "0"
+}
+glossary/default_case_sensitive=true
+layout/styles={
+"Custom001": {
+"export_overrides": {
+"bold_font": "\"res://assets/addons/fonts/novello/OpenType_TTF/Novello_Red_Bold.ttf\"",
+"bold_italic_font": "\"res://assets/addons/fonts/novello/OpenType_TTF/Novello_Red_Bold.ttf\"",
+"box_size": "Vector2(1200, 110)",
+"italic_font": "\"res://assets/addons/fonts/novello/OpenType_TTF/Novello_Red_Italic.ttf\"",
+"name_label_box_offset": "Vector2(-55, -15)",
+"name_label_font": "\"res://assets/addons/fonts/moderno_3/Moderno.ttf\"",
+"name_label_font_size": "35.0",
+"normal_font": "\"res://assets/addons/fonts/novello/OpenType_TTF/Novello_Red_Normal.ttf\"",
+"text_size": "25.0"
+},
+"inherits": "Default"
+},
+"Default": {
+"export_overrides": {
+"box_size": "Vector2(1000, 110)"
+},
+"inherits": ""
+},
+"MiddleText": {
+"export_overrides": {
+"bold_font": "\"res://assets/addons/fonts/novello/OpenType_TTF/Novello_Red_Bold.ttf\"",
+"bold_italic_font": "\"res://assets/addons/fonts/novello/OpenType_TTF/Novello_Red_Bold.ttf\"",
+"box_animation_new_text": "1",
+"box_modulate": "Color(0.00784314, 0.00784314, 0.00784314, 0)",
+"box_size": "Vector2(1920, 400)",
+"italic_font": "\"res://assets/addons/fonts/novello/OpenType_TTF/Novello_Red_Italic.ttf\"",
+"normal_font": "\"res://assets/addons/fonts/novello/OpenType_TTF/Novello_Red_Normal.ttf\"",
+"text_alignment": "1",
+"text_size": "50.0"
+}
+}
+}
+layout/default_style="res://assets/_tcu/resources/dialogic/style/SFX.tres"
+text/letter_speed=0.01
+text/initial_text_reveal_skippable=true
+text/text_reveal_skip_delay=0.1
+text/autoadvance_per_character_delay=0.1
+text/autoadvance_ignored_characters_enabled=true
+animations/join_default_length=0.5
+animations/leave_default_length=0.5
+animations/leave_default_wait=true
+animations/join_default_wait=true
+choices/autofocus_first=true
+choices/delay=0.2
+choices/reveal_delay=0
+choices/reveal_by_input=false
+save/autosave_delay=60.0
+save/encryption_on_exports_only=true
+text/autopauses={}
+directories/dch_directory={
+"characters/food_man": "res://assets/_tcu/resources/characters/food_man.dch",
+"characters/mc": "res://assets/_tcu/resources/characters/mc.dch",
+"characters/mom": "res://assets/_tcu/resources/characters/mom.dch",
+"characters/sfx": "res://assets/_tcu/resources/characters/sfx.dch",
+"characters/woman": "res://assets/_tcu/resources/characters/woman.dch",
+"food_man": "res://assets/_tcu/resources/characters/food_man.dch",
+"mc": "res://assets/_tcu/resources/characters/mc.dch",
+"mom": "res://assets/_tcu/resources/characters/mom.dch",
+"resources/characters/food_man": "res://assets/_tcu/resources/characters/food_man.dch",
+"resources/characters/mc": "res://assets/_tcu/resources/characters/mc.dch",
+"resources/characters/mom": "res://assets/_tcu/resources/characters/mom.dch",
+"resources/characters/sfx": "res://assets/_tcu/resources/characters/sfx.dch",
+"resources/characters/woman": "res://assets/_tcu/resources/characters/woman.dch",
+"sfx": "res://assets/_tcu/resources/characters/sfx.dch",
+"woman": "res://assets/_tcu/resources/characters/woman.dch"
+}
+directories/dtl_directory={
+"Chapter1": "res://assets/_tcu/resources/timelines/Chapter1.dtl",
+"chap1_scence1": "res://assets/_tcu/resources/timelines/chap1_scence1.dtl",
+"chap1_scence2": "res://assets/_tcu/resources/timelines/chap1_scence2.dtl",
+"chap1_scence3": "res://assets/_tcu/resources/timelines/chap1_scence3.dtl",
+"chap1_scence4": "res://assets/_tcu/resources/timelines/chap1_scence4.dtl",
+"chap1_scence5": "res://assets/_tcu/resources/timelines/chap1_scence5.dtl",
+"chap2_scence6": "res://assets/_tcu/resources/timelines/chap2_scence6.dtl",
+"chap2_scence7": "res://assets/_tcu/resources/timelines/chap2_scence7.dtl",
+"chap2_scence8": "res://assets/_tcu/resources/timelines/chap2_scence8.dtl",
+"chap3_scence10": "res://assets/_tcu/resources/timelines/chap3_scence10.dtl",
+"chap3_scence11": "res://assets/_tcu/resources/timelines/chap3_scence11.dtl",
+"chap3_scence12": "res://assets/_tcu/resources/timelines/chap3_scence12.dtl",
+"chap3_scence9": "res://assets/_tcu/resources/timelines/chap3_scence9.dtl",
+"chap4_scencex": "res://assets/_tcu/resources/timelines/chap4_scencex.dtl",
+"demo_timeline001": "res://assets/_tcu/resources/timelines/demo_timeline001.dtl",
+"demo_timeline002": "res://assets/_tcu/resources/timelines/demo_timeline002.dtl",
+"resources/timelines/Chapter1": "res://assets/_tcu/resources/timelines/Chapter1.dtl",
+"resources/timelines/chap1_scence1": "res://assets/_tcu/resources/timelines/chap1_scence1.dtl",
+"resources/timelines/chap1_scence2": "res://assets/_tcu/resources/timelines/chap1_scence2.dtl",
+"resources/timelines/chap1_scence3": "res://assets/_tcu/resources/timelines/chap1_scence3.dtl",
+"resources/timelines/chap1_scence4": "res://assets/_tcu/resources/timelines/chap1_scence4.dtl",
+"resources/timelines/chap1_scence5": "res://assets/_tcu/resources/timelines/chap1_scence5.dtl",
+"resources/timelines/chap2_scence6": "res://assets/_tcu/resources/timelines/chap2_scence6.dtl",
+"resources/timelines/chap2_scence7": "res://assets/_tcu/resources/timelines/chap2_scence7.dtl",
+"resources/timelines/demo_timeline001": "res://assets/_tcu/resources/timelines/demo_timeline001.dtl",
+"resources/timelines/demo_timeline002": "res://assets/_tcu/resources/timelines/demo_timeline002.dtl",
+"resources/timelines/test_timeline_01": "res://assets/_tcu/resources/timelines/test_timeline_01.dtl",
+"resources/timelines/test_wait_until_click_input_timeline": "res://assets/_tcu/resources/timelines/test_wait_until_click_input_timeline.dtl",
+"resources/timelines/text_testing": "res://assets/_tcu/resources/timelines/text_testing.dtl",
+"resources/timelines/timeline_test_effect": "res://assets/_tcu/resources/timelines/timeline_test_effect.dtl",
+"test_timeline_01": "res://assets/_tcu/resources/timelines/test_timeline_01.dtl",
+"test_wait_until_click_input": "res://assets/_tcu/resources/timelines/test_wait_until_click_input.dtl",
+"test_wait_until_click_input_timeline": "res://assets/_tcu/resources/timelines/test_wait_until_click_input_timeline.dtl",
+"text_testing": "res://assets/_tcu/resources/timelines/text_testing.dtl",
+"timeline_black": "res://assets/_tcu/resources/timelines/timeline_black.dtl",
+"timeline_test_effect": "res://assets/_tcu/resources/timelines/timeline_test_effect.dtl",
+"timelines/Chapter1": "res://assets/_tcu/resources/timelines/Chapter1.dtl",
+"timelines/chap1_scence1": "res://assets/_tcu/resources/timelines/chap1_scence1.dtl",
+"timelines/chap1_scence2": "res://assets/_tcu/resources/timelines/chap1_scence2.dtl",
+"timelines/chap1_scence3": "res://assets/_tcu/resources/timelines/chap1_scence3.dtl",
+"timelines/chap1_scence4": "res://assets/_tcu/resources/timelines/chap1_scence4.dtl",
+"timelines/chap1_scence5": "res://assets/_tcu/resources/timelines/chap1_scence5.dtl",
+"timelines/chap2_scence6": "res://assets/_tcu/resources/timelines/chap2_scence6.dtl",
+"timelines/chap2_scence7": "res://assets/_tcu/resources/timelines/chap2_scence7.dtl",
+"timelines/demo_timeline001": "res://assets/_tcu/resources/timelines/demo_timeline001.dtl",
+"timelines/demo_timeline002": "res://assets/_tcu/resources/timelines/demo_timeline002.dtl",
+"timelines/test_timeline_01": "res://assets/_tcu/resources/timelines/test_timeline_01.dtl",
+"timelines/test_wait_until_click_input_timeline": "res://assets/_tcu/resources/timelines/test_wait_until_click_input_timeline.dtl",
+"timelines/text_testing": "res://assets/_tcu/resources/timelines/text_testing.dtl",
+"timelines/timeline_test_effect": "res://assets/_tcu/resources/timelines/timeline_test_effect.dtl"
+}
+layout/style_list=["res://assets/_tcu/resources/dialogic/style/SFX.tres", "res://assets/_tcu/resources/dialogic/style/CharacterDefault.tres", "res://assets/_tcu/resources/dialogic/style/MiddleText.tres"]
+extensions_folder="res://addons/dialogic_additions"
+
+[display]
+
+window/size/viewport_width=1920
+window/size/viewport_height=1080
+window/size/mode=3
+window/size/borderless=true
+window/size/window_width_override=960
+window/size/window_height_override=540
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
+
+[dotnet]
+
+project/assembly_name="The Neighbors Upstair"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/dialogic/plugin.cfg", "res://addons/godot_icon/plugin.cfg", "res://addons/sisyphus_tools/plugin.cfg")
+
+[input]
+
+dialogic_default_action={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":4194309,"physical_keycode":0,"key_label":0,"unicode":0,"echo":false,"script":null)
+, Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":0,"position":Vector2(0, 0),"global_position":Vector2(0, 0),"factor":1.0,"button_index":1,"canceled":false,"pressed":true,"double_click":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":32,"physical_keycode":0,"key_label":0,"unicode":0,"echo":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":88,"physical_keycode":0,"key_label":0,"unicode":0,"echo":false,"script":null)
+, Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":0,"pressure":0.0,"pressed":false,"script":null)
+]
+}
+Escape={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194305,"key_label":0,"unicode":0,"echo":false,"script":null)
+]
+}
+
+[rendering]
+
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
+
+[user:]
+
+/user_preferences/=0.43
+
+[user_preferences]
+
+volume/master_volume=0.43

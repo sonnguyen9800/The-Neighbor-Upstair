@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dcy077duomtko"
+path="res://.godot/imported/tinnitus sound effect (No copyright) [TubeRipper.cc].mp3-fcc649747b2832a24c25805807f35891.mp3str"
+
+[deps]
+
+source_file="res://assets/_tcu/resources/sounds/Effect/tinnitus sound effect (No copyright) [TubeRipper.cc].mp3"
+dest_files=["res://.godot/imported/tinnitus sound effect (No copyright) [TubeRipper.cc].mp3-fcc649747b2832a24c25805807f35891.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dlij4fjgncuaj"
+path="res://.godot/imported/Keyboard typing sound effect (no copyright free to use) [TubeRipper.com].mp3-0cab47291c5a33a376323617a160f9dc.mp3str"
+
+[deps]
+
+source_file="res://assets/_tcu/resources/sounds/Effect/Keyboard typing sound effect (no copyright free to use) [TubeRipper.com].mp3"
+dest_files=["res://.godot/imported/Keyboard typing sound effect (no copyright free to use) [TubeRipper.com].mp3-0cab47291c5a33a376323617a160f9dc.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

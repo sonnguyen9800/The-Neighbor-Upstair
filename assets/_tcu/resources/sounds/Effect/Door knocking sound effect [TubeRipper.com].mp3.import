@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://ckbn1pdkp0dq4"
+path="res://.godot/imported/Door knocking sound effect [TubeRipper.com].mp3-c590b01928c0efd6e2bb4014005ec5d3.mp3str"
+
+[deps]
+
+source_file="res://assets/_tcu/resources/sounds/Effect/Door knocking sound effect [TubeRipper.com].mp3"
+dest_files=["res://.godot/imported/Door knocking sound effect [TubeRipper.com].mp3-c590b01928c0efd6e2bb4014005ec5d3.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

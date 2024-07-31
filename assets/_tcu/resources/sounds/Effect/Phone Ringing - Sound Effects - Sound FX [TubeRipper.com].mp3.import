@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dya2w13g2a35m"
+path="res://.godot/imported/Phone Ringing - Sound Effects - Sound FX [TubeRipper.com].mp3-35fd5a066a7c528ed8c0f7de0783d214.mp3str"
+
+[deps]
+
+source_file="res://assets/_tcu/resources/sounds/Effect/Phone Ringing - Sound Effects - Sound FX [TubeRipper.com].mp3"
+dest_files=["res://.godot/imported/Phone Ringing - Sound Effects - Sound FX [TubeRipper.com].mp3-35fd5a066a7c528ed8c0f7de0783d214.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

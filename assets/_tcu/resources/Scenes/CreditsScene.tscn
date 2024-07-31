@@ -1,0 +1,46 @@
+[gd_scene load_steps=5 format=3 uid="uid://dnhth5uohumfq"]
+
+[ext_resource type="Script" path="res://assets/_tcu/scripts/scenes/SceneCredits.cs" id="1_ulfti"]
+[ext_resource type="Script" path="res://assets/SisyphusGLibrary/ui/AutoSize/AutoSizeRichLabel.gd" id="2_gdt7b"]
+[ext_resource type="FontFile" uid="uid://bkf1rt4kbuotx" path="res://assets/addons/fonts/moderno_3/Moderno.ttf" id="2_jhuna"]
+[ext_resource type="PackedScene" uid="uid://ct4dek63v5j5j" path="res://assets/addons/_3rdPackage/credits-scene/credits-scene/credits.tscn" id="2_lxumu"]
+
+[node name="CreditsScene" type="Control" node_paths=PackedStringArray("_endGameText")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ulfti")
+_endGameText = NodePath("ColorRect/CenterContainer/AutoSizeRichLabel")
+_creditsScene = ExtResource("2_lxumu")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.94902, 0.847059, 0.905882, 0)
+
+[node name="CenterContainer" type="CenterContainer" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = 1.0
+grow_horizontal = 2
+
+[node name="AutoSizeRichLabel" type="RichTextLabel" parent="ColorRect/CenterContainer"]
+custom_minimum_size = Vector2(1920, 100)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/normal_font = ExtResource("2_jhuna")
+theme_override_font_sizes/normal_font_size = 8
+bbcode_enabled = true
+text = "[center]The End[/center]"
+fit_content = true
+script = ExtResource("2_gdt7b")
+max_font_size = 100

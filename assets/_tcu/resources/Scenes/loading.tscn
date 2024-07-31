@@ -1,0 +1,73 @@
+[gd_scene load_steps=4 format=3 uid="uid://brnpcqo0rjips"]
+
+[ext_resource type="Script" path="res://assets/_tcu/scripts/scenes/SceneLoading.cs" id="1_r6ldy"]
+[ext_resource type="Theme" uid="uid://cn3k7xqhf3xue" path="res://assets/_tcu/resources/theme/TextUiThemes.tres" id="2_mdbjv"]
+[ext_resource type="Script" path="res://assets/SisyphusGLibrary/ui/AutoSize/AutoSizeRichLabel.gd" id="3_pj56y"]
+
+[node name="Loading" type="Control" node_paths=PackedStringArray("_loadingUI", "_loadingTextTitle")]
+top_level = true
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 2
+script = ExtResource("1_r6ldy")
+_loadingUI = NodePath("Control")
+_loadingTextTitle = NodePath("Control/LoadingTitleTxt/AutoSizeRichLabel2")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="LoadingTitleTxt" type="VBoxContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_stretch_ratio = 0.0
+mouse_filter = 2
+theme = ExtResource("2_mdbjv")
+alignment = 1
+
+[node name="AutoSizeRichLabel2" type="RichTextLabel" parent="Control/LoadingTitleTxt"]
+custom_minimum_size = Vector2(1500, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_filter = 2
+theme_override_font_sizes/normal_font_size = 8
+bbcode_enabled = true
+text = "[center]Loading...[center]"
+scroll_active = false
+script = ExtResource("3_pj56y")
+max_font_size = 100
+
+[node name="AutoSizeRichLabel3" type="RichTextLabel" parent="Control"]
+custom_minimum_size = Vector2(1500, 100)
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 50.0
+offset_top = -100.0
+offset_right = 1550.0
+grow_vertical = 0
+size_flags_horizontal = 0
+mouse_filter = 2
+theme = ExtResource("2_mdbjv")
+theme_override_font_sizes/normal_font_size = 52
+bbcode_enabled = true
+text = "Press Escape to access the Save Menu and save your game."
+scroll_active = false
+script = ExtResource("3_pj56y")
+max_font_size = 100

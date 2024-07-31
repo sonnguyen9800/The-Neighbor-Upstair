@@ -1,0 +1,149 @@
+[gd_scene load_steps=6 format=3 uid="uid://bo5rf1rtwxe8k"]
+
+[ext_resource type="Script" path="res://assets/_tcu/scripts/popup/SavePopup.cs" id="1_bmauj"]
+[ext_resource type="FontFile" uid="uid://bkf1rt4kbuotx" path="res://assets/addons/fonts/moderno_3/Moderno.ttf" id="2_lm2b8"]
+[ext_resource type="Texture2D" uid="uid://c0tijkvxklfio" path="res://assets/_tcu/resources/sprites/black.png" id="2_s75jf"]
+[ext_resource type="FontFile" uid="uid://cii507g0b4k5i" path="res://assets/addons/fonts/novello/OpenType_TTF/Novello_Red_Normal.ttf" id="3_io7qr"]
+[ext_resource type="Script" path="res://assets/_tcu/scripts/popup/UISaveItem.cs" id="4_u3k4c"]
+
+[node name="SavePopup" type="Control" node_paths=PackedStringArray("saveSlot1", "saveSlot2", "saveSlot3")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_bmauj")
+saveSlot1 = NodePath("Container/Main/VBoxContainer/SaveSlot1")
+saveSlot2 = NodePath("Container/Main/VBoxContainer/SaveSlot2")
+saveSlot3 = NodePath("Container/Main/VBoxContainer/SaveSlot3")
+
+[node name="BackgroundShadow" type="TextureRect" parent="."]
+modulate = Color(1, 1, 1, 0.921569)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_s75jf")
+
+[node name="BackgroundCloseButton" type="TextureButton" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Container" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -261.5
+offset_top = -224.0
+offset_right = 261.5
+offset_bottom = 224.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Container"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -199.0
+offset_top = 46.0
+offset_right = 203.0
+offset_bottom = 135.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_lm2b8")
+theme_override_font_sizes/font_size = 41
+text = "Game Save"
+horizontal_alignment = 1
+
+[node name="Main" type="Control" parent="Container"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -145.0
+offset_top = -178.0
+offset_right = 166.0
+offset_bottom = 275.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Container/Main"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.174
+anchor_top = 0.084
+anchor_right = 1.08
+anchor_bottom = 0.898
+offset_left = 13.114
+offset_top = 49.948
+offset_right = 11.12
+offset_bottom = -64.794
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SaveSlot1" type="Control" parent="Container/Main/VBoxContainer" node_paths=PackedStringArray("_label")]
+layout_mode = 2
+size_flags_vertical = 3
+script = ExtResource("4_u3k4c")
+_label = NodePath("SaveButton")
+
+[node name="SaveButton" type="Button" parent="Container/Main/VBoxContainer/SaveSlot1"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("3_io7qr")
+text = "Save 1"
+
+[node name="SaveSlot2" type="Control" parent="Container/Main/VBoxContainer" node_paths=PackedStringArray("_label")]
+layout_mode = 2
+size_flags_vertical = 3
+script = ExtResource("4_u3k4c")
+_label = NodePath("SaveButton")
+
+[node name="SaveButton" type="Button" parent="Container/Main/VBoxContainer/SaveSlot2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("3_io7qr")
+text = "Save 1"
+
+[node name="SaveSlot3" type="Control" parent="Container/Main/VBoxContainer" node_paths=PackedStringArray("_label")]
+layout_mode = 2
+size_flags_vertical = 3
+script = ExtResource("4_u3k4c")
+_label = NodePath("SaveButton")
+
+[node name="SaveButton" type="Button" parent="Container/Main/VBoxContainer/SaveSlot3"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("3_io7qr")
+text = "Save 1"
+
+[connection signal="pressed" from="Container/Main/VBoxContainer/SaveSlot1/SaveButton" to="Container/Main/VBoxContainer/SaveSlot1" method="OnClickSave"]
+[connection signal="pressed" from="Container/Main/VBoxContainer/SaveSlot2/SaveButton" to="Container/Main/VBoxContainer/SaveSlot2" method="OnClickSave"]
+[connection signal="pressed" from="Container/Main/VBoxContainer/SaveSlot3/SaveButton" to="Container/Main/VBoxContainer/SaveSlot3" method="OnClickSave"]

@@ -1,0 +1,260 @@
+[gd_scene load_steps=4 format=3 uid="uid://bvgsowlfo5q4p"]
+
+[ext_resource type="Script" path="res://assets/_tcu/scripts/popup/SettingPopup.cs" id="1_bbs4m"]
+[ext_resource type="FontFile" uid="uid://bkf1rt4kbuotx" path="res://assets/addons/fonts/moderno_3/Moderno.ttf" id="1_y6rcv"]
+[ext_resource type="Texture2D" uid="uid://c0tijkvxklfio" path="res://assets/_tcu/resources/sprites/black.png" id="2_o1hgw"]
+
+[node name="SettingPopup" type="Control" node_paths=PackedStringArray("_tglMainMenu", "_tglInGame", "_sliderInGame", "_sliderMenu")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_bbs4m")
+_tglMainMenu = NodePath("TglMainMenu")
+_tglInGame = NodePath("TglIngame")
+_sliderInGame = NodePath("TglIngame/VBoxContainer/TglMainMenu/SoundControlSlider")
+_sliderMenu = NodePath("TglMainMenu/TglMainMenu/SoundControlSlider")
+
+[node name="BackgroundShadow" type="TextureRect" parent="."]
+modulate = Color(1, 1, 1, 0.921569)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_o1hgw")
+
+[node name="BackgroundCloseButton" type="TextureButton" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TglMainMenu" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -261.0
+offset_top = -224.0
+offset_right = 262.0
+offset_bottom = -43.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="TglMainMenu"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -198.5
+offset_top = 26.0
+offset_right = 203.5
+offset_bottom = 84.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("1_y6rcv")
+theme_override_font_sizes/font_size = 41
+text = "Setting"
+horizontal_alignment = 1
+
+[node name="TglMainMenu" type="Control" parent="TglMainMenu"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -145.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="SoundLabel" type="RichTextLabel" parent="TglMainMenu/TglMainMenu"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 52.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/normal_font = ExtResource("1_y6rcv")
+theme_override_font_sizes/normal_font_size = 25
+bbcode_enabled = true
+text = "[center]Sound Volume[/center]"
+fit_content = true
+
+[node name="SoundControlSlider" type="HSlider" parent="TglMainMenu/TglMainMenu"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -209.5
+offset_top = -83.0
+offset_right = 209.5
+grow_horizontal = 2
+grow_vertical = 0
+max_value = 1.0
+step = 0.01
+value = 1.0
+
+[node name="TglIngame" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -261.0
+offset_top = -302.0
+offset_right = 262.0
+offset_bottom = 175.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="TglIngame"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -198.5
+offset_top = 26.0
+offset_right = 203.5
+offset_bottom = 84.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("1_y6rcv")
+theme_override_font_sizes/font_size = 41
+text = "Setting"
+horizontal_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TglIngame"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 20
+
+[node name="TglMainMenu" type="Control" parent="TglIngame/VBoxContainer"]
+custom_minimum_size = Vector2(0, 100)
+layout_direction = 2
+layout_mode = 2
+
+[node name="SoundLabel" type="RichTextLabel" parent="TglIngame/VBoxContainer/TglMainMenu"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/normal_font = ExtResource("1_y6rcv")
+theme_override_font_sizes/normal_font_size = 30
+bbcode_enabled = true
+text = "[center]Sound Volume[/center]"
+fit_content = true
+
+[node name="SoundControlSlider" type="HSlider" parent="TglIngame/VBoxContainer/TglMainMenu"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -209.5
+offset_top = -83.0
+offset_right = 209.5
+grow_horizontal = 2
+grow_vertical = 0
+max_value = 1.0
+step = 0.01
+value = 1.0
+
+[node name="Save" type="Control" parent="TglIngame/VBoxContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+
+[node name="ButtonSave" type="Button" parent="TglIngame/VBoxContainer/Save"]
+clip_contents = true
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -176.5
+offset_top = -47.0
+offset_right = 176.5
+offset_bottom = 53.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_y6rcv")
+theme_override_font_sizes/font_size = 30
+text = "Save Game"
+
+[node name="Load" type="Control" parent="TglIngame/VBoxContainer"]
+visible = false
+clip_contents = true
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+
+[node name="ButtonLoad" type="Button" parent="TglIngame/VBoxContainer/Load"]
+clip_contents = true
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -176.5
+offset_top = -50.0
+offset_right = 176.5
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_y6rcv")
+theme_override_font_sizes/font_size = 30
+text = "Load Game"
+
+[node name="Exit" type="Control" parent="TglIngame/VBoxContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+
+[node name="ButtonExit" type="Button" parent="TglIngame/VBoxContainer/Exit"]
+clip_contents = true
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -176.5
+offset_top = -50.0
+offset_right = 176.5
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_y6rcv")
+theme_override_font_sizes/font_size = 30
+text = "Quit To Menu"
+
+[connection signal="drag_ended" from="TglMainMenu/TglMainMenu/SoundControlSlider" to="." method="OnMasterVolumeSetEnded"]
+[connection signal="value_changed" from="TglMainMenu/TglMainMenu/SoundControlSlider" to="." method="SetMasterVolumeDb"]
+[connection signal="drag_ended" from="TglIngame/VBoxContainer/TglMainMenu/SoundControlSlider" to="." method="OnMasterVolumeSetEnded"]
+[connection signal="value_changed" from="TglIngame/VBoxContainer/TglMainMenu/SoundControlSlider" to="." method="SetMasterVolumeDb"]
+[connection signal="pressed" from="TglIngame/VBoxContainer/Save/ButtonSave" to="." method="_on_button_save_pressed"]
+[connection signal="pressed" from="TglIngame/VBoxContainer/Save/ButtonSave" to="." method="OnSaveButtonClicked"]
+[connection signal="pressed" from="TglIngame/VBoxContainer/Load/ButtonLoad" to="." method="OnLoadButtonClicked"]
+[connection signal="pressed" from="TglIngame/VBoxContainer/Exit/ButtonExit" to="." method="OnQuitToMainMenuClicked"]

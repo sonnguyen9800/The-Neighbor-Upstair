@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dek1poeu0vrcy"
+path="res://.godot/imported/Josef Suk, Serenade, Op 6 - A Far Cry.mp3-2ee02aeb983ad23be94b625fa75a01d2.mp3str"
+
+[deps]
+
+source_file="res://assets/_tcu/resources/sounds/Background/Josef Suk, Serenade, Op 6 - A Far Cry.mp3"
+dest_files=["res://.godot/imported/Josef Suk, Serenade, Op 6 - A Far Cry.mp3-2ee02aeb983ad23be94b625fa75a01d2.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

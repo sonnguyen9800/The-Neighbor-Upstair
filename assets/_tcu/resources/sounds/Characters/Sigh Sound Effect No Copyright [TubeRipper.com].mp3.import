@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bdv03f65lko1t"
+path="res://.godot/imported/Sigh Sound Effect No Copyright [TubeRipper.com].mp3-0dd0aabb48bd25ddfb8b7c74356d653d.mp3str"
+
+[deps]
+
+source_file="res://assets/_tcu/resources/sounds/Characters/Sigh Sound Effect No Copyright [TubeRipper.com].mp3"
+dest_files=["res://.godot/imported/Sigh Sound Effect No Copyright [TubeRipper.com].mp3-0dd0aabb48bd25ddfb8b7c74356d653d.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

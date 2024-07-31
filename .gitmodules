@@ -1,0 +1,6 @@
+[submodule "assets/SisyphusGLibrary"]
+	path = assets/SisyphusGLibrary
+	url = https://github.com/sonnguyen9800/SisyphusG
+[submodule "addons/sisyphus_tools"]
+	path = addons/sisyphus_tools
+	url = https://github.com/sonnguyen9800/SisyphusTools.git
