@@ -9,6 +9,8 @@ In "The Neighbor Upstair" you step into the shoes of a lone university student, 
 
 However, this peace is soon disrupted when you encounter your unsettling neighbor upstairs. Navigate through an eerie narrative filled with suspense and unexpected twists, as you uncover the mysteries that linger just above you.
 
+#### Release:
+https://sisyphuslab.itch.io/the-neighbor-upstairs
 #### Disclaimer:
 - The game is unfinished. This prototype is done mainly to get practice in Godot Engine.
 - Due to personal issues, the team have to withhold this project. Please don't expect this to be finished any time soon.
