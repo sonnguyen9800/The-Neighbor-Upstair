@@ -21,11 +21,12 @@ https://sisyphuslab.itch.io/the-neighbor-upstairs
 - Use ESC button to open main menu
 
 #### Some In Game Images:
+![Screenshot (9)](https://github.com/user-attachments/assets/17390a3c-ee23-4f46-bebe-5902c503dcc0)
+![Screenshot (12)](https://github.com/user-attachments/assets/11ee082f-0304-4aae-aaea-9bde98a0cc16)
+![Screenshot (11)](https://github.com/user-attachments/assets/ab39afd8-e3d8-401b-a186-bfe05af1f795)
+![Screenshot (10)](https://github.com/user-attachments/assets/3a099e3a-147d-49db-97da-f2b1331c4d1a)
 
-![Screenshot (12)](https://github.com/user-attachments/assets/209e61f8-ba3b-4f71-85c4-044c66f58046)
-![Screenshot (11)](https://github.com/user-attachments/assets/27b183cb-d2c3-4813-a899-5579722e994b)
-![Screenshot (10)](https://github.com/user-attachments/assets/29aec231-cf3a-477e-a7f3-96b795f391bd)
-![Screenshot (9)](https://github.com/user-attachments/assets/af3b8a6e-9187-4194-b9d4-603940c2926e)
+
 
 #### Credits
 - Chuong Nguyen Hoang Khanh: Game Designer, Narrative and scripting writter.
