@@ -13,7 +13,7 @@ However, this peace is soon disrupted when you encounter your unsettling neighbo
 - The game is unfinished. This prototype is done mainly to get practice in Godot Engine.
 - Due to personal issues, the team have to withhold this project. Please don't expect this to be finished any time soon.
 - The core part of this repository: the data on "timeline" and "background" images (used in the game) had been ommited.
-- 
+
 #### Gameplay
 - Point and Click
 - Use ESC button to open main menu
